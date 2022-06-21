@@ -1,0 +1,43 @@
+<div class="main_container clearfix" (keydown)="onKeypress($event)">
+  <h1 class="heading">{{title}}</h1>
+  <div class="container">
+    <div class="display_div">{{display}}</div>
+    <div class="input_div">{{value}}</div>
+    <div class="all_buttons">
+      <div>
+        <button class="operators" (click)="clearAll()">C</button>
+        <button class="operators" (click)="clear()">CE</button>
+        <button class="operators" (click)="backSpace()">DEL</button>
+        <button class="operators" (click)="all_operators('÷')">÷</button>
+      </div>
+      <div>
+        <button (click)="all_numbers('7')">7</button>
+        <button (click)="all_numbers('8')">8</button>
+        <button (click)="all_numbers('9')">9</button>
+        <button class="operators" (click)="all_operators('x')">x</button>
+      </div>
+      <div>
+        <button (click)="all_numbers('4')">4</button>
+        <button (click)="all_numbers('5')">5</button>
+        <button (click)="all_numbers('6')">6</button>
+        <button class="operators" (click)="all_operators('-')">-</button>
+      </div>
+      <div>
+        <button (click)="all_numbers('1')">1</button>
+        <button (click)="all_numbers('2')">2</button>
+        <button (click)="all_numbers('3')">3</button>
+        <button class="operators" (click)="all_operators('+')">+</button>
+      </div>
+      <div>
+        <button class="operators" (click)="all_operators('%')">%</button>
+        <button (click)="all_numbers('0')">0</button>
+        <button (click)="all_numbers('.')">.</button>
+        <button id="equals_to" (click)="equalsTo('=')">=</button>
+      </div>
+    </div>
+  </div>
+  <div class="container2">
+    <app-history (newItemEvent)="newClearHistory()"
+                 [resultHistory]="final"></app-history>
+  </div>
+</div>

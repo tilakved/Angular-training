@@ -1,0 +1,13 @@
+<h3>title: {{ title }}</h3>
+<h1>{{num}}</h1>
+
+<button (click)="plusMinus(true)">+</button>
+<button (click)="plusMinus(false)">-</button>
+
+<h2>COURSES</h2>
+<ul>
+  <li *ngFor="let course of courses">{{course}}</li>
+</ul>
+<!--*ngif="course == 'a'"-->
+
+<app-ng-test></app-ng-test>

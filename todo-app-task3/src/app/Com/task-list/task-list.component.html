@@ -1,0 +1,59 @@
+<div>
+  <div *ngFor="let x of hero.names">
+    <h3 *ngIf="x.id == id" class="workspace_heading">{{x.name | titlecase}} Workspace</h3>
+    <div *ngIf="x.id == id">
+      <mat-accordion #accordion="matAccordion">
+        <div *ngFor="let task of x.task_array ; let index=index">
+          <div class="show_all_tasks" [ngClass]="task.priority">
+            <mat-expansion-panel #mep="matExpansionPanel">
+              <mat-expansion-panel-header (click)="fetch_data(index)">
+                <mat-panel-title>
+                  <p>{{task.name}}</p>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <div class="dis-flx w100">
+                <div class="expansion_left w50">
+                  <p>Notes</p>
+                  <textarea [(ngModel)]="textarea_notes"></textarea>
+                </div>
+                <div class="expansion_right w50">
+                  <div class="select_due_date">
+                    <p>Due Date</p>
+                    <div class="dis-flx">
+                      <button (click)="today_button(index)" class="select_due_date_button" mat-button>Today</button>
+                      <button (click)="tomorrow_button(index)" class="select_due_date_button" mat-button>Tomorrow
+                      </button>
+                      <input [matDatepicker]="picker" [(ngModel)]="date" class="select_due_date_input"
+                             (dateChange)="onChangeDate($event,index)">
+                      <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </div>
+                  </div>
+                  <div class="priority_dropdown">
+                    <p>Priority</p>
+                    <select (change)="onOptionsSelected($event,index)" [(ngModel)]="prior" id="priorities"
+                            name="priorities">
+                      <option value="Low">Low</option>
+                      <option value="Medium">Medium</option>
+                      <option value="High">High</option>
+                    </select>
+                  </div>
+                  <div class="dis-flx save_delete_button">
+                    <button (click)="save_button(index); mep.expanded = !mep.expanded" class="save_button" >
+                      Save
+                    </button>
+                    <button (click)="delete_button(index)" class="delete_button">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </mat-expansion-panel>
+          </div>
+        </div>
+      </mat-accordion>
+    </div>
+  </div>
+  <div class="center_line">
+    <button (click)="add_task_button()" class="add_task">+</button>
+    <input [(ngModel)]="task_name" (keydown)="onKeydown($event)">
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+
+<input type="text" [(ngModel)]="value1">
+<input type="text" [(ngModel)]="value2">
+
+  <div>
+<button (click)="operations('add')" >+</button>
+<button (click)="operations('sub')" >-</button>
+<button (click)="operations('divide')" >/</button>
+<button (click)="operations('multiply')" >*</button>
+</div>
+
+<h1>{{result}}</h1>

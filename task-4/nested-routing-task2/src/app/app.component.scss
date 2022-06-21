@@ -1,0 +1,149 @@
+//$fa-font-path: "../node_modules/font-awesome/fonts";
+//@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+/* Global Declarations */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.fl {
+  float: left;
+}
+
+.w30 {
+  width: 30%;
+}
+
+.w70 {
+  width: 70%;
+}
+
+.clearfix:before,
+.clearfix:after {
+  width: 100%;
+  display: table;
+  content: '';
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.heading {
+  text-align: center;
+}
+
+#nav_bar {
+  background-color: white;
+  padding: 2px 7px;
+  position: relative;
+}
+
+.hrms_button,
+.pass_manage_button,
+.toggl_button {
+  padding: 5px 50px;
+  background-color: white;
+  display: inline-block;
+}
+
+.side_bar {
+  background-color: aqua;
+  height: 500px;
+  max-width: 400px;
+}
+
+.content_box {
+  background-color: whitesmoke;
+  height: 500px;
+  width: -moz-fit-content;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.menu_box {
+  position: absolute;
+  top: 33px;
+  left: 0;
+  background-color: white;
+}
+
+.menu_box2 {
+  position: absolute;
+  top: 33px;
+  left: 181px;
+  width: 195px;
+  background-color: white;
+}
+
+.menu_box3 {
+  position: absolute;
+  top: 33px;
+  left: 387px;
+  background-color: white;
+  //width: 195px;
+}
+
+.menu_box_button {
+  display: block;
+  padding: 5px 20px;
+  width: 100%;
+}
+
+.new_box {
+  padding: 5px;
+}
+
+.new_box_menu,
+.new_box_menu2,
+.new_box_menu3 {
+  position: absolute;
+  top: 3px;
+  left: 189px;
+  background: white;
+  width: fit-content;
+  padding: 10px;
+}
+.new_box_menu2{
+  top: 63px;
+}
+.new_box_menu3{
+  top: 83px;
+}
+.hrms_button:hover,
+.pass_manage_button:hover,
+.toggl_button:hover {
+  background-color: lightgrey;
+}
+
+
+.breadcrumb :nth-child(1) :after{
+  content: '>';
+  padding: 5px;
+}

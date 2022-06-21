@@ -1,0 +1,7 @@
+<div class="all_list_box">
+  <div *ngIf="hero.names.length > 0">
+    <div (click)="hero.show=false" *ngFor="let x of hero.names" [ngStyle]="{background: x.div_color}" [routerLink]='["/list",x.id]' class="list_box">
+      <p>{{x.name}}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<!--<h3 style="text-align: center; margin: 0">{{ title | titlecase }}</h3>-->
+<div class="container">
+  <div class="nav-bar">
+    <button (click)="back_to_list()" *ngIf="hero.show== false" mat-button routerLink="/list">Back</button>
+    <button (click)="new_list()" *ngIf="hero.show== true" mat-button>New list</button>
+    <div class="all_buttons">
+      <button (click)="hero.show=true" class="all_buttons_1" mat-button routerLink="/list">List</button>
+      <button (click)="hero.show=false" class="all_buttons_2" mat-button routerLink="/schedule">Schedule</button>
+      <button (click)="hero.show=false" class="all_buttons_3" mat-button routerLink="/today">Today</button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="router-outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

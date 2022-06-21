@@ -1,0 +1,28 @@
+.workspace_select_list {
+  background-color: #343434;
+  color: white;
+  padding: 9px;
+  margin: 3px;
+  max-width: 100px;
+  width: 100%;
+  border: none;
+  outline: none;
+  z-index: 1;
+  position: relative;
+
+}
+
+.select_due_date_button {
+  padding: 0 5px;
+  min-width: auto;
+  background-color: #484848;
+  border: 1px solid #222;
+  color: #f7f7f7;
+  border-radius: 0;
+  font-weight: 100;
+}
+.schedule_sequence_name{
+  font-size: 18px;
+  color: #4a90d9;
+  font-weight: 700;
+}

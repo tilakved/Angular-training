@@ -1,0 +1,45 @@
+<!--<p>The hero's birthday is {{ birthday | date }}</p>-->
+<h1>{{title}}</h1>
+<h3>date-{{title}}</h3>
+<div>
+  <p>Only date- {{today | date}}</p>
+  <p>format- fullDate = {{today | date:'fullDate'}}</p>
+  <p>format- hh:mm aa z = {{today | date:'hh:mm aa z'}}</p>
+  <p>format- long = {{today | date:'long' : 'GMT':'en-US'}}</p>
+  <p>format- dd/MMM/yyyy = {{today | date:'dd/MMM/yyyy'}}</p>
+</div>
+<hr>
+<h3>cases-{{title}}</h3>
+<div>
+  <p>upper case-{{ title | uppercase }}</p>
+  <p>lower case-{{ title | lowercase }}</p>
+  <p>title case- {{ title | titlecase }}</p>
+</div>
+<hr>
+<h3>decimal-{{title}}</h3>
+<!--{{ value_expression | number [ : digitsInfo [ : locale ] ] }}-->
+
+<div>
+  <p>
+    No specified formatting:
+    {{pi | number}}
+    <!--output: '3.142'-->
+  </p>
+
+  <p>
+    With digitsInfo parameter specified:
+    {{pi | number:'4.1-5'}}
+    <!-- it defines the number of digits . 1 to 5 range -->
+    <!--output: '0,003.14159'-->
+  </p>
+
+  <p>
+    With digitsInfo and locale parameters specified:
+    {{pi | number:'4.1-5':"nl-NL"}}
+    <!--output: '0 003,14159'-->
+  </p>
+
+</div>
+<hr>
+<h3>custom - {{title}}</h3>
+<p>{{x | demo}}</p>

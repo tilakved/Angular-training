@@ -1,0 +1,232 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+body {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.clearfix:before,
+.clearfix:after {
+  width: 100%;
+  display: table;
+  content: '';
+}
+
+p {
+  margin: 0;
+}
+
+.mat-body p, .mat-body-1 p, .mat-typography .mat-body p, .mat-typography .mat-body-1 p, .mat-typography p {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.fl{
+ float: left;
+}
+.fr{
+  float: right;
+}
+.dis-flx{
+  display: flex;
+}
+.w33 {
+  width: 33.33%;
+}
+
+.w50 {
+  width: 50%;
+}
+.w40{
+  width: 40%;
+}
+.w60{
+  width: 60%;
+}
+.w100{
+  width: 100%;
+}
+//----------------------------
+input {
+  background-color: #343434;
+  color: white;
+  padding: 10px;
+  max-width: 490px;
+  width: 100%;
+  border: none;
+  z-index: 1;
+  position: relative;
+  //border: 5px solid blue;
+}
+.add_task {
+  padding: 10px 20px;
+  color: white;
+  background-color: #343434;
+  border: none;
+  z-index: 1;
+  position: relative;
+}
+
+input:focus,
+.add_task:focus {
+  outline: 2px solid #80bdff;
+  z-index: 3;
+}
+
+.center_line {
+  max-width: -webkit-fill-available;
+  width: 100%;
+  text-align: center;
+  //position: relative;
+  //z-index: 1;
+}
+
+.show_all_tasks {
+  max-width: -webkit-fill-available;
+  //padding: 7px 14px;
+  background: #343434;
+  width: 640px;
+  margin: 5px auto;
+  color: hsla(0, 0%, 100%, .5) !important;
+  border-left: 3px solid #1e90ff;
+}
+
+.workspace_heading {
+  color: hsla(0, 0%, 100%, .5) !important;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.mat-expansion-panel-header {
+  padding: 0 15px;
+}
+
+.mat-expansion-panel {
+  background-color: #343434;
+  color: hsla(0, 0%, 100%, .5) !important;
+
+}
+
+.mat-expansion-panel-header:hover, .mat-expansion-panel .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled=true]), .mat-expansion-panel .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled=true]), .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+  background-color: #343434;
+}
+
+.mat-expansion-indicator {
+  color: rgba(0, 0, 0, .87);
+}
+
+textarea {
+  width: 90%;
+  height: 90%;
+  background: #343434;
+  color: white;
+}
+
+.select_due_date_button {
+  padding: 0 5px;
+  min-width: auto;
+  background-color: #484848;
+  border: 1px solid #222;
+  color: #f7f7f7;
+  border-radius: 0;
+  font-weight: 100;
+}
+
+.select_due_date_input {
+  border-bottom: 1px solid black;
+}
+
+.select_due_date_input:focus {
+  outline: none;
+}
+
+#priorities {
+  width: 100%;
+  background: #343434;
+  border: 1px solid #222;
+  color: #c7c7c7;
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+#priorities:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.save_button {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.delete_button {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.save_button:hover {
+  color: #fff;
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.save_delete_button {
+  justify-content: space-between;
+}
+
+.priority_dropdown {
+  padding: 5px 0;
+}
+
+.Low {
+  border-color: #1e90ff;
+}
+
+.Medium {
+  border-color: #ff7500;
+}
+
+.High {
+  border-color: #ff0000;
+}

@@ -1,0 +1,27 @@
+<!--<div class="spacing">-->
+<!--  <h2>{{title}}</h2>-->
+<!--  <button mat-button [matMenuTriggerFor]="Items"> Items</button>-->
+<!--  <mat-menu #Items="matMenu">-->
+<!--    <button routerLink="item-1" mat-menu-item>Item1</button>-->
+<!--    <button routerLink="item-2" mat-menu-item [matMenuTriggerFor]="item2">Item2</button>-->
+<!--    <button routerLink="item-3" mat-menu-item>Item3</button>-->
+<!--  </mat-menu>-->
+<!--  <mat-menu #item2="matMenu">-->
+<!--    <button routerLink="item-2/item21" mat-menu-item>Item21</button>-->
+<!--    <button routerLink="item-2/item22" mat-menu-item>Item22</button>-->
+<!--  </mat-menu>-->
+<!--</div>-->
+
+<div class="spacing">
+  <h2>{{title}}</h2>
+  <div (click)="show2 = true" (click)="show = !show" id="menuHead" routerLink="">Items</div>
+  <div class="menu-box" *ngIf="!show">
+    <div (click)="show2 = true" class="menu-content" routerLink="item-1">Item1</div>
+    <div (click)="show2 = !show2" class="menu-content" routerLink="item-2">Item2</div>
+    <div (click)="show2 = true" class="menu-content" routerLink="item-3">Item3</div>
+  </div>
+  <div class="menu-box" *ngIf="!show2">
+    <div class="menu-content" routerLink="item-2/item21">Item21</div>
+    <div class="menu-content" routerLink="item-2/item22">Item22</div>
+  </div>
+</div>

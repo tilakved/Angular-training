@@ -1,0 +1,42 @@
+h1 {
+  margin: 0;
+  height: 50px;
+
+}
+
+p {
+  margin: 5px;
+}
+
+.ans {
+  font-size: 22px;
+}
+
+button {
+  float: left;
+  padding: 15px 30px;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke
+}
+
+button:active {
+  background-color: lightblue;
+}
+
+button:hover {
+  background-color: #d3d3d37d;
+}
+
+.history_bar {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+.scroll_history {
+  padding: 10px 0 0 0;
+}
+
+.scroll_history:hover {
+  background-color: #d3d3d3c4;
+}

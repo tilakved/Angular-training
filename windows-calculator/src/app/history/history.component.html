@@ -1,0 +1,8 @@
+<div class="history_bar">
+  <button (click)="clearHistory()">Clear History</button>
+  <h1>History</h1>
+</div>
+<div class="scroll_history" *ngFor="let x of resultHistory?.reverse()"> //.reverse for
+  <p>{{x.obj1}}</p>
+  <p class="ans">{{x.obj2}}</p>
+</div>

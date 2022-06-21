@@ -1,0 +1,8 @@
+<div mat-dialog-content>
+  <p>What's your list name?</p>
+  <input id="new_list_name" matInput [(ngModel)]="name" autocomplete="off">
+</div>
+<div mat-dialog-actions>
+  <button (click)="onCancel()" class="cancel-button" mat-button>Cancel</button>
+  <button [mat-dialog-close]="name" mat-button routerLink="list">Create</button>
+</div>

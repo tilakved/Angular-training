@@ -1,0 +1,94 @@
+.heading, .container {
+  text-align: center;
+}
+
+.clearfix:before,
+.clearfix:after {
+  width: 100%;
+  display: table;
+  content: '';
+}
+
+.container {
+  border: 1px solid #000000;
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+  float: left;
+}
+
+button {
+  padding: 25px 90px;
+  width: 24%;
+  margin: 2px;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+  font-size: 18px;
+}
+
+//.all_buttons{
+//  text-align: center;
+//}
+.input_div {
+  margin: 0 auto;
+  width: 780px;
+}
+
+.input_div {
+  text-align: right;
+  width: 96.79%;
+  padding: 0 12px 10px 12px;
+  margin: 0;
+  font-size: 30px;
+}
+
+.all_buttons {
+  padding-bottom: 10px;
+}
+
+.display_div {
+  text-align: right;
+  padding: 20px;
+  height: 20px;
+  font-size: 18px;
+}
+
+#equals_to {
+  background-color: #388a8d;
+  color: white;
+}
+#equals_to:hover {
+  background-color: #388a8da8;
+}
+.operators {
+  background-color: #d3d3d3c4;
+}
+
+button:hover {
+  background-color: #d3d3d37d;
+}
+button:active {
+  background-color: lightblue;
+}
+
+.container2 {
+  max-width: 500px;
+  width: 100%;
+  text-align: right;
+  float: right;
+  margin: 0;
+  padding: 0 10px 10px 15px;
+  height: 489px;
+  Overflow-y: scroll;
+}
+
+.app-history {
+  margin: 0;
+}
+
+.main_container {
+  width: 1350px;
+  margin: auto;
+  //position: relative;
+  font-family: FreeSans, Serif, sans-serif;
+}

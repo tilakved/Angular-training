@@ -1,0 +1,20 @@
+input#new_list_name{
+  font-size: medium;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  background: #424242;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+p{
+  margin: 0;
+}
+
+button:focus{
+  background-color: #00000040;
+}
+.cancel-button{
+  background-color: #ff0000a8;
+}

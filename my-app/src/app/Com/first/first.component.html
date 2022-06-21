@@ -1,0 +1,6 @@
+<p>parent works!</p>
+<button (click)="toggleChild()" >toggle child</button>
+
+  <input type="text" [(ngModel)]="channelName">
+<app-second *ngIf="isChild" [channelName]="channelName"></app-second>
+

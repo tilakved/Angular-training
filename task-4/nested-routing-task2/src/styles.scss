@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  background-color: lightgrey;
+}
+
+.content_box .outlet {
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.content_box {
+  padding: 10px;
+}
+
+breadcrumb {
+  padding: 5px;
+  margin: 0;
+
+  ol {
+    margin: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      //padding: 5px;
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.extra_height {
+  height: 70px;
+}

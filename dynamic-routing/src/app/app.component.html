@@ -1,0 +1,14 @@
+<h1>{{title | titlecase}}</h1>
+
+<div class="list">
+  <ul *ngFor="let item of items">
+    <li><a [routerLink]="['/account', item.id]">{{item.name}} = {{item.id}}</a></li>
+  </ul>
+  <ul>
+    <li><a [routerLink]="['/account']">x5 = 6</a></li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
+
+

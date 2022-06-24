@@ -30,8 +30,7 @@ export const appRoutes: Routes = [
   {path: 'today', component: TodayComponent},
   {path: '', pathMatch: 'full', redirectTo: 'list'},
   {path: 'list/:id' ,component: TaskListComponent},
-  {path: '**', component: PagenotfoundComponent},
-
+  {path: '**', component: PagenotfoundComponent}
 ]
 
 @NgModule({

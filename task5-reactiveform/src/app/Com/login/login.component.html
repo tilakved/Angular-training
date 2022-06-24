@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="border">
+    <form [formGroup]="loginForm" class="text-center" (ngSubmit)="check(username.value,password.value)">
+      <div>
+        <hr>
+        <h2>Login</h2>
+        <hr>
+      </div>
+      <br>
+      <div class="margin">
+        <div>
+          <label>Username: </label>
+          <input formControlName="uname" type="text" #username
+                 [ngClass]="{ 'is-invalid': (submitted && f.uname.invalid) || (f.uname.touched && f.uname.invalid) }">
+          <div *ngIf="(submitted && f.uname.errors) || (f.uname.touched && f.uname.invalid)" class="alert-danger">
+            <small *ngIf="f.uname.errors?.['required']">Username is required</small>
+            <small *ngIf="f.uname.errors?.['minlength']">3 characters required only.</small>
+            <small *ngIf="f.uname.errors?.['pattern']">Enter without space and any special characters</small>
+          </div>
+        </div>
+        <br>
+        <div>
+          <label>Password: </label>
+          <input formControlName="password" #password type="password"
+                 [ngClass]="{ 'is-invalid': (submitted && f.password.invalid) || (f.password.touched && f.password.invalid) }">
+          <div *ngIf="(submitted && f.password.errors) || (f.password.touched && f.password.invalid)"
+               class="alert-danger">
+            <small *ngIf="f.password.errors?.['required']">Password is required</small>
+            <small *ngIf="f.password.errors?.['minlength']">At least 3 characters required</small>
+            <small *ngIf="f.password.errors?.['pattern']">should not contain space,special character</small>
+          </div>
+        </div>
+        <br>
+        <button class="button-css">Login</button>
+      </div>
+    </form>
+  </div>
+</div>

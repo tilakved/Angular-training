@@ -1,0 +1,27 @@
+<h3>{{title| titlecase}}</h3>
+<div>
+  <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+    <label for="userName">Enter your Username: </label>
+    <input type="text" id="userName" name="userName" placeholder="userName" formControlName="userName">
+    <span *ngIf="new_user && new_user.invalid && new_user.touched" class="alert-danger">Username is required</span><br><br>
+
+    <label for="fullName">Enter your Full name: </label>
+    <input type="text" id="fullName" name="fullName" placeholder="fullName" formControlName="fullName">
+    <span *ngIf="new_name && new_name.invalid && new_name.touched" class="alert-danger">Name is required</span><br><br>
+
+    <label for="address">Enter your Address: </label>
+    <input type="text" id="address" name="address" placeholder="address" formControlName="address">
+    <span *ngIf="new_address && new_address.invalid && new_address.touched" class="alert-danger">Username is required</span><br><br>
+
+    <label for="email">Enter your Email: </label>
+    <input type="text" id="email" name="email" placeholder="email" formControlName="email">
+    <span *ngIf="new_email && new_email.invalid && new_email.touched" class="alert-danger">Username is required</span><br><br>
+
+    <label for="password">Enter your password: </label>
+    <input type="text" id="password" name="password" placeholder="password" formControlName="password">
+    <span *ngIf="new_password && new_password.invalid && new_password.touched" class="alert-danger">Username is required</span><br><br>
+    <br>
+    <input type="submit" value="Save" [disabled]="formdata.invalid">
+  </form>
+</div>
+<p> Text box result is: {{userName}} </p>

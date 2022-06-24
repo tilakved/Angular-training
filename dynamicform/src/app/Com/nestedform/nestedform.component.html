@@ -1,0 +1,34 @@
+<hr>
+<h3>{{title|titlecase}}</h3>
+<form [formGroup]="nestedForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname" formControlName="fname" class="form-control">
+    <button type="button" (click)="updateForm()" class="btn btn-success">Update</button>
+  </div>
+
+  <div>
+    <label for="lname">Last Name:</label>
+    <input type="text" id="lname" name="lname" formControlName="lname" class="form-control">
+  </div>
+
+  <div formGroupName="address">
+    <h4>Address</h4>
+    <label for="street">Street: </label>
+    <input id="street" type="text" formControlName="street">
+    <br>
+    <label for="city">City: </label>
+    <input id="city" type="text" formControlName="city">
+    <br>
+    <label for="state">State: </label>
+    <input id="state" type="text" formControlName="state">
+    <br>
+    <label for="zip">Zip Code: </label>
+    <input id="zip" type="text" formControlName="zip">
+  </div>
+  <div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+  </div>
+</form>

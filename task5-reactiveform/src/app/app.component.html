@@ -1,0 +1,10 @@
+<div class="container">
+  <h1 class="text-center">{{title| titlecase}}</h1>
+  <div class="header-nav text-center">
+    <button class="tab" routerLink="form">Form</button>
+    <button class="tab" routerLink="login">Details</button>
+  </div>
+  <div>
+      <router-outlet></router-outlet>
+  </div>
+</div>

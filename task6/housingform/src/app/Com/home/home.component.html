@@ -1,0 +1,107 @@
+<button class="btn btn-success" (click)="addHouse()">Add More House</button>
+<div>
+  <form [formGroup]="houseForm"><!--    class="was-validated"-->
+    <div *ngFor="let house of houses().controls ;let index=index" class="new_border p-2 m-2" formArrayName="houses">
+      <div [formGroupName]="index">
+        <div class="p-2">
+          <label for="hName">House Name:</label>
+          <input class="form-control" formControlName="houseName" id="hName" name="hName"
+                 placeholder="Enter name of your House" required type="text">
+                    <div class="invalid-feedback">Please fill out this field.</div>
+          <div *ngIf="house.get('houseName')?.invalid! && (house.get('houseName')?.dirty || house.get('houseName')?.touched)">
+            <span *ngIf="house.get('houseName')?.errors?.['required']">Please fill out this field.</span>
+          </div>
+        </div>
+        <div class="p-2">
+          <p>House Type:</p>
+          <input class="form-check-input m-1" formControlName="houseType" type="radio" value="Small">
+          <label class="form-check-label">Small</label>
+          <input class="form-check-input m-1" formControlName="houseType" type="radio" value="Medium">
+          <label class="form-check-label">Medium</label>
+          <input checked class="form-check-input m-1" formControlName="houseType" type="radio" value="Large">
+          <label class="form-check-label">Large</label>
+        </div>
+        <div>
+          <div class="p-2">
+            <button (click)="addAddress(index)" class="btn btn-primary" type="button">Add Address</button>
+          </div>
+          <div formArrayName="address" *ngFor="let add of address(index).controls; let add_index=index"
+               class="new_border p-2 m-2">
+            <div [formGroupName]="add_index">
+              <div class="p-2">
+                <label for="plotNo">Plot No.:</label>
+                <input type="text" id="plotNo" formControlName="plotNo" placeholder="Enter Plot Number"
+                       class="form-control" required>
+                <div *ngIf="add.get('plotNo')?.invalid! && (add.get('plotNo')?.dirty || add.get('plotNo')?.touched)">
+                  <span *ngIf="add.get('plotNo')?.errors?.['required']">Please fill out this field.</span>
+                </div>
+              </div>
+              <div class="p-2">
+                <label for="area">Area:</label>
+                <input type="text" id="area" formControlName="area" placeholder="Enter your area"
+                       class="form-control" required>
+                <div *ngIf="add.get('area')?.invalid! && (add.get('area')?.dirty || add.get('area')?.touched)">
+                  <span *ngIf="add.get('area')?.errors?.['required']">Please fill out this field.</span>
+                </div>
+              </div>
+              <div class="p-2">
+                <label for="pinCode">PinCode:</label>
+                <input type="number" id="pinCode" formControlName="pinCode" placeholder="Enter your Pin Code"
+                       class="form-control" required [minlength]="6" [maxlength]="6">
+                <div *ngIf="add.get('pinCode')?.invalid! && (add.get('pinCode')?.dirty || add.get('pinCode')?.touched)">
+                  <span *ngIf="add.get('pinCode')?.errors?.['required']">Please fill out this field.</span>
+                  <span *ngIf="add.get('pinCode')?.errors?.['pattern']">Enter only 6 Digits</span>
+                </div>
+              </div>
+              <div>
+                <div class="p-2">
+                  <button (click)="addPerson(index,add_index)" class="btn btn-primary" type="button">Add Person</button>
+                </div>
+                <div *ngFor="let per of person(index,add_index).controls; let person_index=index"
+                     class="new_border p-2 m-2 new_container"
+                     formArrayName="person">
+                  <div [formGroupName]="person_index">
+                    <div class="p-2">
+                      <label for="p_name">Name:</label>
+                      <input type="text" id="p_name" formControlName="p_name" placeholder="Enter Person's Name"
+                             class="form-control" required>
+                      <div *ngIf="per.get('p_name')?.invalid! && (per.get('p_name')?.dirty || per.get('p_name')?.touched)">
+                        <span *ngIf="per.get('p_name')?.errors?.['required']">Please fill out this field.</span>
+                      </div>
+                    </div>
+                    <div class="p-2">
+                      <label for="p_age">Age:</label>
+                      <input type="number" id="p_age" formControlName="p_age" placeholder="Enter age"
+                             class="form-control" required>
+                      <div *ngIf="per.get('p_age')?.invalid! && (per.get('p_age')?.dirty || per.get('p_age')?.touched)">
+                        <span *ngIf="per.get('p_age')?.errors?.['required']">Please fill out this field.</span>
+                      </div>
+                    </div>
+                    <div class="p-2">
+                      <p>Gender:</p>
+                      <input type="radio" class="form-check-input m-1" value="Male"
+                             formControlName="p_gender">
+                      <label class="form-check-label">Male</label>
+                      <input type="radio" class="form-check-input m-1" value="Female"
+                             formControlName="p_gender">
+                      <label class="form-check-label">Female</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dis-flx">
+          <button type="submit" class="btn btn-success" (click)="onSubmit(index)"
+                  [disabled]="houseForm.invalid">Submit
+          </button>
+          <button type="button" (click)="removeHouse(index)" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!--{{this.houseForm.value | json}}-->
+

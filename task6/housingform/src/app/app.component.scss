@@ -1,0 +1,26 @@
+.non_active_class {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d
+}
+
+.non_active_class:hover {
+  color: #fff;
+  background-color: #6c757d70;
+  border-color: #6c757d
+}
+
+.btn-left{
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+}
+.btn-right{
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+}

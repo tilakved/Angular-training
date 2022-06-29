@@ -1,0 +1,21 @@
+p {
+  margin: 0;
+}
+
+.new_container {
+  max-width: 240px;
+  width: 100%;
+display: inline-block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: textfield;
+  margin: 0;
+}
+input[type=number],
+input[type=number]:active{
+  -webkit-appearance: none;
+}
+span{
+  color: red;
+}

@@ -1,0 +1,44 @@
+<div class="new_border m-4 p-2 text-center">
+  <h3>{{title | titlecase}}</h3>
+</div>
+<div *ngFor="let house of this._hero.final_arr; let update_index = index">
+  <div class="new_border m-4 p-2">
+    <div class="set-center">
+      <p>House no. {{update_index + 1}}</p>
+      <button type="button" (click)="updateBtn(update_index, house)" class="btn btn-secondary">Update</button>
+    </div>
+    <div class="new_border m-2 p-2">
+      <p>House Name: {{house.houseName}}</p>
+      <hr>
+      <p>House Type: {{house.houseType}}</p>
+      <hr>
+      <p>House Id: {{house.houseId}}</p>
+      <hr *ngIf="house.address.length > 0">
+      <p *ngIf="house.address.length > 0">Address:</p>
+      <div *ngFor="let new_formdata of house.address; let new_formdata_index = index">
+        <hr>
+        <p>Address no.{{new_formdata_index + 1}}</p>
+        <div class="new_border m-2 p-2">
+          <p>Plot no.: {{new_formdata.plotNo}}</p>
+          <hr>
+          <p>Area.: {{new_formdata.area}}</p>
+          <hr>
+          <p>PinCode: {{new_formdata.pinCode}}</p>
+          <hr *ngIf="new_formdata.person.length > 0">
+          <p *ngIf="new_formdata.person.length > 0">Persons:</p>
+          <div *ngFor="let per_new_formdata of new_formdata.person; let per_new_formdata_index = index">
+            <div class="new_border m-2 p-2">
+              <p>Person no.{{per_new_formdata_index + 1}}</p>
+              <hr>
+              <p>Name: {{per_new_formdata.p_name}}</p>
+              <hr>
+              <p>Age : {{per_new_formdata.p_age}}</p>
+              <hr>
+              <p>Gender: {{per_new_formdata.p_gender}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

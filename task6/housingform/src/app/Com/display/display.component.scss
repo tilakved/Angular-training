@@ -1,0 +1,22 @@
+.border-top-bottom{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+}
+p{
+  margin: 2px 0;
+}
+hr{
+  margin: 0;
+  border-top :1px solid black;
+  //padding: 1px 0;
+}
+.set-center{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+h3{
+  margin: 0;
+}

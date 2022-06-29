@@ -1,0 +1,16 @@
+<div class="container p-2">
+  <div class="dis-flx">
+    <h2>{{title | titlecase}}</h2>
+    <mat-button-toggle-group name="toggle_comp_buttons" class="btn-group btn-group-toggle">
+      <mat-button-toggle value="Home" routerLink="home" class="btn non_active_class btn-secondary btn-left"
+                         routerLinkActive="btn-secondary">Home
+      </mat-button-toggle>
+      <mat-button-toggle value="Display" routerLink="display" class="btn non_active_class btn-right"
+                         routerLinkActive="btn-secondary">Display
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

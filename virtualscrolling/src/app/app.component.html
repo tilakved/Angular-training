@@ -1,0 +1,16 @@
+<cdk-virtual-scroll-viewport [itemSize]="20" style="border: 1px solid black">
+  <table>
+    <thead>
+    <tr>
+      <td>{{col1heading | uppercase}}</td>
+      <td>{{col2heading | uppercase}}</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *cdkVirtualFor="let album of states">
+      <td>{{album.abbreviation}}</td>
+      <td>{{album.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</cdk-virtual-scroll-viewport>

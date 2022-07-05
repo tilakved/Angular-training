@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
     // fader,
     // slider,
     // transformer,
-    stepper
+    // stepper
   ]
 })
 export class AppComponent {
